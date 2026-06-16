@@ -1885,7 +1885,7 @@ export default function Profess() {
             <div style={{ maxWidth:"640px", width:"100%", display:"flex", flexDirection:"column", gap:"24px" }}>
               <div>
                 <p style={{ fontSize:"9px", letterSpacing:".2em", textTransform:"uppercase", color:"#2A2520", marginBottom:"16px" }}>Communication Training</p>
-                <h1 className="hero-tagline" style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(44px,6vw,72px)", fontWeight:400, lineHeight:1.15, color:"#F0EDE6", letterSpacing:"-.01em" }}>
+                <h1 className="hero-tagline" style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(40px,5vw,60px)", fontWeight:400, lineHeight:1.15, color:"#F0EDE6", letterSpacing:"-.01em" }}>
                   Every conversation<br/>
                   has another side.
                 </h1>
