@@ -182,7 +182,7 @@ Giliranmu, Raka.
 Core rules:
 - Social skill is real skill — same rigor as formal communication
 - Show the other person inner reaction, not just their words
-- You cannot move people you do not understand.
+- Every conversation has another side
 ## CHARACTER VARIETY
 When embodying a role, use diverse characters — vary gender (male/female) and ethnicity (White, Latin, African American, European, South Asian, East Asian, Southeast Asian) naturally based on context. Use culturally appropriate names. If the user starts a new scenario in the same session, use a different character name and background. Never repeat the same character for different scenarios.
 
@@ -1886,8 +1886,8 @@ export default function Profess() {
               <div>
                 <p style={{ fontSize:"9px", letterSpacing:".2em", textTransform:"uppercase", color:"#2A2520", marginBottom:"16px" }}>Communication Training</p>
                 <h1 className="hero-tagline" style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(44px,6vw,72px)", fontWeight:400, lineHeight:1.15, color:"#F0EDE6", letterSpacing:"-.01em" }}>
-                  You cannot move people<br/>
-                  you do not understand.
+                  Every conversation<br/>
+                  has another side.
                 </h1>
               </div>
               <div style={{ width:"100px", height:"1px", background:"#D4B47C" }}/>
@@ -2056,7 +2056,7 @@ export default function Profess() {
 
           {/* Footer */}
           <div style={{ padding:"32px 40px", textAlign:"center" }}>
-            <p style={{ fontSize:"11px", color:"#1E1E1E", letterSpacing:".08em" }}>Profess — You cannot move people you do not understand.</p>
+            <p style={{ fontSize:"11px", color:"#1E1E1E", letterSpacing:".08em" }}>Profess — Every conversation has another side.</p>
           </div>
         </div>
 
