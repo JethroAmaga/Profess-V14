@@ -1300,14 +1300,17 @@ break;
 }
 
 const PLAYLISTS = [
+  { id: "4cCh0Jz4zZQ", label: "Malcolm", desc: "Malcolm Todd" },
+  { id: "Ksut6ib0VSY", label: "Mayer", desc: "John Mayer" },
+  { id: "OZCJ2DxaIJw", label: "Weeknd",  desc: "The Weeknd" },
+  { id: "P6E5mLWj61Y", label: "F. Ocean",   desc: "Frank Ocean" },
+  { id: "Bea0yLo4T_4", label: "SZA",     desc: "SZA" },
+  { id: "7MYM3DKEptk", label: "Rex", desc: "Rex Orange County" },
+  { id: "EWq1VXEUGIU", label: "Daniel",  desc: "Daniel Caesar" },
+  { id: "A4cgsTlc75Y", label: "Nat King", desc: "Nat King Cole" },
+  { id: "6X_OEUFV0v4", label: "Piano",   desc: "Grand Piano" },
+  { id: "mIYzp5rcTvU", label: "Classic", desc: "Classical Music" },
   { id: "rhrCG0Vtx3g", label: "Lofi",    desc: "Chill lofi beats" },
-  { id: "4cCh0Jz4zZQ", label: "Malcolm", desc: "Jazz cafe vibes" },
-  { id: "OZCJ2DxaIJw", label: "Weeknd",  desc: "Peaceful piano" },
-  { id: "P6E5mLWj61Y", label: "Frank",   desc: "Ambient focus" },
-  { id: "Bea0yLo4T_4", label: "SZA",     desc: "Study music" },
-  { id: "EWq1VXEUGIU", label: "Daniel",  desc: "Night vibes" },
-  { id: "6X_OEUFV0v4", label: "Piano",   desc: "Rain & lofi" },
-  { id: "mIYzp5rcTvU", label: "Classic", desc: "Sleep sounds" },
 ];
 
 // ─── Main component ────────────────────────────────────────────────────────
