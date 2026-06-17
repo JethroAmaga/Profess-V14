@@ -1800,7 +1800,7 @@ export default function Profess() {
     style={{
       position:"absolute",
       left:"50%",
-      top:"38%",
+      top:"34%",
       transform:"translate(-50%, -50%)",
       zIndex:1000,
       width:"260px",
@@ -2027,7 +2027,7 @@ export default function Profess() {
           </p>
         </div>
 
-      {/* Character row — between hero and panels */}
+     {/* Character row — between hero and panels */}
 <div
   className="hero-char-row"
   style={{
@@ -2041,6 +2041,15 @@ export default function Profess() {
     zIndex:2
   }}
 >
+
+  {/* Spacer untuk menambah area scroll di ujung kiri */}
+  <div
+    style={{
+      width:"80px",
+      flexShrink:0
+    }}
+  />
+
   {heroRow.map((charObj, i) => {
     const role = ["interviewer","colleague","friend_female","negotiator"][i];
     const svg = buildSVG(charObj, "neutral", false);
@@ -2109,14 +2118,6 @@ export default function Profess() {
       </div>
     );
   })}
-
-  {/* Spacer untuk menambah area scroll di ujung kanan */}
-  <div
-    style={{
-      width:"80px",
-      flexShrink:0
-    }}
-  />
 </div>
 
         {/* ── THREE-PANEL SECTION ── */}
