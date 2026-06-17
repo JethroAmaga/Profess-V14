@@ -1938,7 +1938,7 @@ export default function Profess() {
           {/* Lamp click overlay */}
           <div className="hero-lamp-overlay" onClick={() => { setWarmMode(w => { const next = !w; setRoomMood(next ? "warm" : "neutral"); return next; }); }} title={warmMode ? "warm mode on" : "click the lamp"} style={{ position:"absolute", right:"22%", top:"51%", width:"6%", height:"16%", cursor:"pointer", zIndex:7, transform:"translateX(50%)" }}/>
           {/* Radio hint text */}
-          <div
+<div
   className="hero-radio-hint"
   onClick={() => {
     hasOpenedMusic.current = true;
@@ -1948,8 +1948,8 @@ export default function Profess() {
   title="Toggle music player"
   style={{
     position:"absolute",
-    right:"28%",
-    top:"45%",
+    right:"8%",
+    bottom:"30%",
     pointerEvents:"all",
     cursor:"pointer",
     zIndex:8,
@@ -1972,6 +1972,7 @@ export default function Profess() {
   >
     {showPlayer ? "music on" : "press radio for music"}
   </p>
+</div>
 
   <span
     style={{
@@ -2047,7 +2048,7 @@ export default function Profess() {
               <rect x="38" y="48" width="24" height="24" fill="transparent"/>
             </g>
             {/* Radio — same relative position/scale as desktop */}
-            <text x="68" y="42" textAnchor="end" fill="#C8B090" fontSize="2" opacity="0.8" letterSpacing="0.3">{lang==="id" ? "PRESS THE RADIO FOR MUSIC" : "PRESS THE RADIO FOR MUSIC"}</text>
+            <text x="68" y="44" textAnchor="end" fill="#C8B090" fontSize="2" opacity="0.8" letterSpacing="0.3">{lang==="id" ? "PRESS THE RADIO FOR MUSIC" : "PRESS THE RADIO FOR MUSIC"}</text>
             <g onClick={() => { if (!mobileMusicConfirmed.current) { setShowDesktopMusicHint(true); return; } hasOpenedMusic.current = true; setShowMusicSuggest(false); setShowPlayer(p => !p); }} style={{ cursor:"pointer" }}>
               <rect x="78.5" y="74" width="14" height="2" rx="0.5" fill="#2A1808" opacity="0.9"/>
               <rect x="79.5" y="76" width="3" height="3.5" rx="0.3" fill="#221408"/>
