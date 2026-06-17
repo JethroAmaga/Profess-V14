@@ -921,7 +921,8 @@ hideLegs = true;
 
   hideLegs = true;
 }
-
+break;
+        
       // ── Parent / grandparent / mentor — armchair ───────────────────────
       case "parent": case "grandparent": case "mentor": case "senior":
       case "pak_rt": case "calon_mertua": case "dosen_pembimbing":
