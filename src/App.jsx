@@ -1794,26 +1794,71 @@ export default function Profess() {
         {/* Warm mode ambient overlay */}
         <div style={{ position:"fixed", inset:0, pointerEvents:"none", zIndex:998, background:"radial-gradient(ellipse at 65% 40%, rgba(180,100,20,0.12) 0%, rgba(140,70,10,0.06) 50%, transparent 80%)", opacity:warmMode?1:0, transition:"opacity 1.5s ease" }}/>
 
-        {/* Mobile popup: recommend desktop for best music experience — shown when radio is pressed, before YouTube embed starts */}
-        {isMobile && showDesktopMusicHint && (
-          <div style={{ position:"fixed", inset:0, zIndex:1000, display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(0,0,0,0.6)", padding:"24px" }}
-            onClick={() => setShowDesktopMusicHint(false)}>
-            <div onClick={e => e.stopPropagation()} style={{ background:"#0E0E0E", border:"1px solid #2A2520", padding:"28px 24px", maxWidth:"320px", textAlign:"center" }}>
-              <p style={{ fontFamily:"'Playfair Display',serif", fontSize:"14px", color:"#C8A870", marginBottom:"12px" }}>
-                {lang==="id" ? "Catatan" : "Note"}
-              </p>
-              <p style={{ fontSize:"13px", lineHeight:1.7, color:"#C8A458", marginBottom:"20px" }}>
-                {lang==="id"
-                  ? "Untuk pengalaman mendengarkan musik yang terbaik, gunakan mode desktop."
-                  : "For the best music listening experience, use desktop mode."}
-              </p>
-              <button onClick={() => { mobileMusicConfirmed.current = true; setShowDesktopMusicHint(false); hasOpenedMusic.current = true; setShowMusicSuggest(false); setShowPlayer(true); }}
-                style={{ background:"none", border:"1px solid #C8A458", color:"#C8A458", fontFamily:"'Inter',sans-serif", fontSize:"11px", letterSpacing:".08em", textTransform:"uppercase", padding:"8px 20px", cursor:"pointer" }}>
-                {lang==="id" ? "Lanjutkan" : "Continue"}
-              </button>
-            </div>
-          </div>
-        )}
+       {/* Mobile popup: recommend desktop for best music experience — shown when radio is pressed, before YouTube embed starts */}
+{isMobile && showDesktopMusicHint && (
+  <div
+    style={{
+      position:"absolute",
+      left:"50%",
+      bottom:"80px",
+      transform:"translateX(-50%)",
+      zIndex:1000,
+      width:"260px",
+      background:"#0E0E0E",
+      border:"1px solid #2A2520",
+      padding:"24px 20px",
+      textAlign:"center",
+      boxShadow:"0 8px 32px rgba(0,0,0,0.45)"
+    }}
+  >
+    <p
+      style={{
+        fontFamily:"'Playfair Display',serif",
+        fontSize:"14px",
+        color:"#C8A870",
+        marginBottom:"12px"
+      }}
+    >
+      {lang==="id" ? "Catatan" : "Note"}
+    </p>
+
+    <p
+      style={{
+        fontSize:"13px",
+        lineHeight:1.7,
+        color:"#C8A458",
+        marginBottom:"20px"
+      }}
+    >
+      {lang==="id"
+        ? "Untuk pengalaman mendengarkan musik yang terbaik, gunakan mode desktop."
+        : "For the best music listening experience, use desktop mode."}
+    </p>
+
+    <button
+      onClick={() => {
+        mobileMusicConfirmed.current = true;
+        setShowDesktopMusicHint(false);
+        hasOpenedMusic.current = true;
+        setShowMusicSuggest(false);
+        setShowPlayer(true);
+      }}
+      style={{
+        background:"none",
+        border:"1px solid #C8A458",
+        color:"#C8A458",
+        fontFamily:"'Inter',sans-serif",
+        fontSize:"11px",
+        letterSpacing:".08em",
+        textTransform:"uppercase",
+        padding:"8px 20px",
+        cursor:"pointer"
+      }}
+    >
+      {lang==="id" ? "Lanjutkan" : "Continue"}
+    </button>
+  </div>
+)}
 
         {/* ── HERO — full viewport height ── */}
         <div className="hero-section" style={{ position:"relative", height:"100vh", display:"flex", flexDirection:"column", overflow:"hidden", paddingBottom:"0" }}>
