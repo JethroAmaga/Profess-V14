@@ -664,38 +664,14 @@ function buildSVG(charOrKey, mood, isTalking, scene = "role") {
   />
 `,
   curtain: `
-  <!-- Top hair -->
   <ellipse cx="80" cy="45" rx="34" ry="18" fill="${h}"/>
   <rect x="46" y="45" width="68" height="18" fill="${h}"/>
 
-  <!-- Center part -->
-  <rect
-    x="77"
-    y="34"
-    width="6"
-    height="14"
-    rx="2"
-    fill="${hairDark}"
-    opacity=".35"
-  />
+  <ellipse cx="54" cy="70" rx="9" ry="18" fill="${h}"/>
+  <ellipse cx="106" cy="70" rx="9" ry="18" fill="${h}"/>
 
-  <!-- Left side -->
-  <ellipse
-    cx="58"
-    cy="72"
-    rx="10"
-    ry="22"
-    fill="${h}"
-  />
-
-  <!-- Right side -->
-  <ellipse
-    cx="102"
-    cy="72"
-    rx="10"
-    ry="22"
-    fill="${h}"
-  />
+  <rect x="78" y="34" width="4" height="10" rx="2"
+        fill="${hairDark}" opacity=".35"/>
 `,
     bald: `
   <ellipse
