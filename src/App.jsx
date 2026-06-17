@@ -1800,7 +1800,7 @@ export default function Profess() {
     style={{
       position:"absolute",
       left:"50%",
-      top:"42%",
+      top:"38%",
       transform:"translate(-50%, -50%)",
       zIndex:1000,
       width:"260px",
