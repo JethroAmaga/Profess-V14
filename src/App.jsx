@@ -2403,7 +2403,7 @@ export default function Profess() {
 )}
 
   {heroRow.map((charObj, i) => {
-    const role = ["interviewer","colleague","crush","negotiator"][i];
+    const role = ["interviewer","colleague","crush","friend_female"][i];
     const svg = buildSVG(charObj, "neutral", false, "role");
 
     return (
