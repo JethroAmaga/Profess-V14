@@ -882,45 +882,87 @@ function buildSVG(charOrKey, mood, isTalking, scene = "role") {
          ${handL}${handR}`;
 hideLegs = true;
 
-} else {
+} } else {
 
   backProps = `
     <!-- Grass -->
-    <rect x="0" y="175" width="160" height="60" fill="#405438"/>
+    <rect x="0" y="185" width="160" height="55" fill="#3F5338"/>
+
+    <!-- Picnic blanket (behind character) -->
+    <rect
+      x="34"
+      y="170"
+      width="92"
+      height="28"
+      rx="4"
+      fill="#8B5A7A"
+    />
 
     <!-- Tree trunk -->
-    <rect x="122" y="85" width="8" height="95" fill="#5A3A20"/>
+    <rect
+      x="118"
+      y="70"
+      width="10"
+      height="115"
+      fill="#5A3A20"
+    />
 
-    <!-- Tree canopy -->
-    <circle cx="126" cy="75" r="28" fill="#4E6A43"/>
-    <circle cx="110" cy="82" r="18" fill="#56734A"/>
-    <circle cx="142" cy="84" r="16" fill="#56734A"/>
+    <!-- Large canopy -->
+    <circle
+      cx="123"
+      cy="62"
+      r="42"
+      fill="#4E6A43"
+    />
 
-    <!-- Picnic blanket -->
-    <rect x="32" y="175" width="96" height="24" rx="4" fill="#7A3434"/>
+    <circle
+      cx="98"
+      cy="72"
+      r="28"
+      fill="#58744B"
+    />
+
+    <circle
+      cx="145"
+      cy="76"
+      r="24"
+      fill="#58744B"
+    />
   `;
 
   bodySVG = `
-    <rect x="42" y="118" rx="14" width="76" height="90" fill="${b}"/>
-    <path d="M58 118 Q80 129 102 118" fill="none" stroke="#C890A0" stroke-width="2.5"/>
-    ${outfitAccent(80,138,50)}
-    ${armLNoHand}${armRNoHand}
+    <!-- Half body -->
+    <rect
+      x="44"
+      y="128"
+      rx="14"
+      width="72"
+      height="58"
+      fill="${b}"
+    />
+
+    <path
+      d="M58 128 Q80 139 102 128"
+      fill="none"
+      stroke="#C890A0"
+      stroke-width="2.5"
+    />
+
+    ${outfitAccent(80,145,50)}
+
+    ${armLNoHand}
+    ${armRNoHand}
   `;
 
   frontProps = `
-    <rect x="32" y="175" width="96" height="24" rx="4" fill="#8A4040" opacity="0.35"/>
-
-    <rect x="54" y="180" width="14" height="44" rx="5" fill="${darken(b,18)}"/>
-    <rect x="92" y="180" width="14" height="44" rx="5" fill="${darken(b,18)}"/>
-
-    <ellipse cx="62" cy="220" rx="18" ry="8" fill="${darken(b,28)}"/>
-    <ellipse cx="98" cy="220" rx="18" ry="8" fill="${darken(b,28)}"/>
-
-    ${handL}${handR}
+    <!-- Hands -->
+    ${handL}
+    ${handR}
   `;
 
   hideLegs = true;
 }
+
 break;
         
       // ── Parent / grandparent / mentor — armchair ───────────────────────
