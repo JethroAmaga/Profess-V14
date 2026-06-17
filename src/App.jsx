@@ -608,7 +608,7 @@ function lighten(hex, amt) {
   try { let r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16); return `#${Math.min(255,r+amt).toString(16).padStart(2,"0")}${Math.min(255,g+amt).toString(16).padStart(2,"0")}${Math.min(255,b+amt).toString(16).padStart(2,"0")}`; } catch { return hex; }
 }
 
-function buildSVG(charOrKey, mood, isTalking) {
+function buildSVG(charOrKey, mood, isTalking, scene = "role") {
   const c = (typeof charOrKey === "object" && charOrKey !== null)
     ? charOrKey
     : (CHARS[charOrKey] || CHARS.default);
@@ -1768,8 +1768,8 @@ export default function Profess() {
   if (screen === "landing") {
     const heroRoleDesc = r => ({ interviewer:"Formal — interviews & performance reviews", reviewer:"Formal — interviews & performance reviews", auditor:"Formal — interviews & performance reviews", examiner:"Formal — thesis defense & academic sessions", professor_academic:"Formal — thesis defense & academic sessions", dean:"Formal — thesis defense & academic sessions", journalist:"Formal — press conferences & media training", critic:"Formal — press conferences & media training", judge:"Formal — mock trials & debate adjudication", prosecutor:"Formal — mock trials & debate adjudication", cross_examiner:"Formal — mock trials & debate adjudication", friend_female:"Social — reconnecting & casual conversation", friend_male:"Social — reconnecting & casual conversation", best_friend:"Social — reconnecting & casual conversation", colleague:"Social — workplace dynamics & office talk", manager:"Social — workplace dynamics & office talk", subordinate:"Social — workplace dynamics & office talk", crush:"Social — romantic & flirtatious situations", romantic_interest:"Social — romantic & flirtatious situations", date:"Social — romantic & flirtatious situations", stranger:"Social — first impressions & small talk", new_acquaintance:"Social — first impressions & small talk", negotiator:"Formal — pitching, negotiation & boardroom", ceo:"Formal — pitching, negotiation & boardroom", executive:"Formal — pitching, negotiation & boardroom", acquirer:"Formal — pitching, negotiation & boardroom", parent:"Social — family conversations", grandparent:"Social — family conversations", calon_mertua:"Social — family conversations", mentor:"Formal — mentorship & guidance sessions", senior:"Formal — mentorship & guidance sessions" }[r] || "Available across all session types");
     const { sofaLeft, sofaRight, beginPanel, aboutPanel, termsPanel, heroRow } = landingChars.current;
-    const livingRoomMale = buildSVG(sofaLeft, roomMood, false);
-    const livingRoomFemale = buildSVG(sofaRight, roomMood, false);
+    const livingRoomMale = buildSVG(sofaLeft, roomMood, false, "livingroom");
+    const livingRoomFemale = buildSVG(sofaRight, roomMood, false, "livingroom");
     const aboutRole = aboutPanel.role;
     const panelCharAbout = buildSVG(aboutPanel.char, "neutral", false);
     const aboutIdleAnim = { journalist:"journalistSway 3s ease-in-out infinite", friend_female:"friendBob 2.8s ease-in-out infinite", colleague:"idleBreathe 3.5s ease-in-out infinite", interviewer:"negotiatorLean 4s ease-in-out infinite" }[aboutRole] || "idleBreathe 3.5s ease-in-out infinite";
@@ -2094,7 +2094,7 @@ export default function Profess() {
 
   {heroRow.map((charObj, i) => {
     const role = ["interviewer","colleague","friend_female","negotiator"][i];
-    const svg = buildSVG(charObj, "neutral", false);
+    const svg = buildSVG(charObj, "neutral", false, "role");
 
     return (
       <div
