@@ -882,7 +882,109 @@ function buildSVG(charOrKey, mood, isTalking, scene = "role") {
          ${handL}${handR}`;
 hideLegs = true;
 
-} else {
+        } else if (
+  roleKey === "crush" ||
+  roleKey === "date" ||
+  roleKey === "romantic_interest"
+) {
+
+  backProps = `
+    <!-- Floor -->
+    <rect
+      x="0"
+      y="185"
+      width="160"
+      height="55"
+      fill="#35261F"
+    />
+
+    <!-- Hanging lamp wire -->
+    <line
+      x1="120"
+      y1="0"
+      x2="120"
+      y2="32"
+      stroke="#705020"
+      stroke-width="2"
+    />
+
+    <!-- Warm hanging lamp -->
+    <circle
+      cx="120"
+      cy="40"
+      r="8"
+      fill="#D4A020"
+    />
+
+    <!-- Lamp glow -->
+    <circle
+      cx="120"
+      cy="40"
+      r="28"
+      fill="#D4A020"
+      opacity="0.12"
+    />
+  `;
+
+  bodySVG = `
+    <rect
+      x="44"
+      y="120"
+      rx="14"
+      width="72"
+      height="58"
+      fill="${b}"
+    />
+
+    <path
+      d="M58 120 Q80 131 102 120"
+      fill="none"
+      stroke="#C890A0"
+      stroke-width="2.5"
+    />
+
+    ${outfitAccent(80,138,50)}
+
+    ${armLNoHand}
+    ${armRNoHand}
+  `;
+
+  frontProps = `
+    <!-- Round cafe table -->
+    <ellipse
+      cx="80"
+      cy="182"
+      rx="42"
+      ry="8"
+      fill="#4A3124"
+    />
+
+    <!-- Table leg -->
+    <rect
+      x="76"
+      y="182"
+      width="8"
+      height="24"
+      fill="#3A2418"
+    />
+
+    <!-- Coffee cup -->
+    <rect
+      x="102"
+      y="172"
+      width="8"
+      height="6"
+      rx="1"
+      fill="#D8D5CE"
+    />
+
+    ${handL}
+    ${handR}
+  `;
+
+  hideLegs = true;
+}
+else {
 
   backProps = `
     <!-- Grass -->
