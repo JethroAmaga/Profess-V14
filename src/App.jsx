@@ -1839,7 +1839,7 @@ export default function Profess() {
               <rect x="79.5" y="72" width="3" height="3.5" rx="0.3" fill="#221408"/>
               <rect x="87.5" y="72" width="3" height="3.5" rx="0.3" fill="#221408"/>
               {/* Radio body */}
-              <rect x="79" y="62" width="13" height="8" rx="1" fill="#4A4A52" stroke="#5A5A62" strokeWidth="0.4"/>
+              <rect x="84" y="62" width="13" height="8" rx="1" fill="#4A4A52" stroke="#5A5A62" strokeWidth="0.4"/>
               {/* Radio speaker grille */}
               <line x1="80.5" y1="63.5" x2="87" y2="63.5" stroke="#3A3A42" strokeWidth="0.45" opacity="0.9"/>
               <line x1="80.5" y1="65" x2="87" y2="65" stroke="#3A3A42" strokeWidth="0.45" opacity="0.9"/>
