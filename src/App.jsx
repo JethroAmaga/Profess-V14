@@ -546,7 +546,7 @@ const generateChar = (roleKey, forcedGender = null) => {
   const hair = pick(HAIR[eth] || HAIR.white);
   // Hairstyle pool, kept gender-appropriate
   const hairStyle = gender === "f"
-    ? pick(["long","romantic_long","bun","bob"])
+    ? pick(["long","romantic_long","long_flowing","bun","bob"])
     : pick(["short","buzz","quiff","messy"]);
   const hairLong = gender === "f";
   // Outfit variant — drives small collar/pattern accents in buildSVG
@@ -638,6 +638,18 @@ function buildSVG(charOrKey, mood, isTalking, scene = "role") {
        <ellipse cx="46" cy="74" rx="9" ry="22" fill="${h}"/>
        <ellipse cx="114" cy="74" rx="9" ry="22" fill="${h}"/>
        <circle cx="80" cy="30" r="13" fill="${h}"/>`,
+    very_long: `
+  <ellipse cx="80" cy="46" rx="34" ry="20" fill="${h}"/>
+  <rect x="46" y="46" width="68" height="22" fill="${h}"/>
+
+  <ellipse cx="46" cy="108" rx="14" ry="58" fill="${h}"/>
+  <ellipse cx="114" cy="108" rx="14" ry="58" fill="${h}"/>
+
+  <ellipse cx="80" cy="146" rx="38" ry="24" fill="${h}" opacity=".85"/>
+
+  <ellipse cx="58" cy="182" rx="12" ry="20" fill="${h}" opacity=".9"/>
+  <ellipse cx="102" cy="182" rx="12" ry="20" fill="${h}" opacity=".9"/>
+`,
     bob: `<ellipse cx="80" cy="46" rx="34" ry="19" fill="${h}"/>
        <rect x="46" y="46" width="68" height="22" fill="${h}"/>
        <ellipse cx="47" cy="72" rx="10" ry="18" fill="${h}"/>
