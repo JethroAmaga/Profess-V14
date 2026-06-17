@@ -1893,14 +1893,14 @@ export default function Profess() {
                 <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:"100%", height:"100%", animation:"friendBob 2.8s ease-in-out infinite", animationDelay:"0.4s" }} dangerouslySetInnerHTML={{ __html: livingRoomFemale }}/>
               </foreignObject>
               {/* Coffee table — top */}
-              <rect x="38" y="68" width="24" height="7" rx="1.5" fill="#2E1E0C" stroke="#3A2410" strokeWidth="0.25"/>
+              <rect x="38" y="68" width="24" height="7" rx="1.5" fill="#4B5A3A" stroke="#35402A" strokeWidth="0.25"/>
               {/* Coffee table — lighter top surface */}
-              <rect x="38.5" y="68" width="23" height="3.5" rx="1" fill="#3A2610" opacity="0.7"/>
+              <rect x="38.5" y="68" width="23" height="3.5" rx="1" fill="#5E7050" opacity="0.7"/>
               {/* Coffee table — legs */}
-              <rect x="39.5" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-              <rect x="44" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-              <rect x="54" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-              <rect x="58" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
+              <rect x="39.5" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+              <rect x="44" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+              <rect x="54" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+              <rect x="58" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
               {/* Radio side table */}
               <rect x="78.5" y="74" width="14" height="2" rx="0.5" fill="#2A1808" opacity="0.9"/>
               <rect x="79.5" y="76" width="3" height="3.5" rx="0.3" fill="#221408"/>
@@ -1922,15 +1922,15 @@ export default function Profess() {
               {/* Lamp shade */}
               <polygon points="44,59 56,59 53.5,51 46.5,51" fill={warmMode ? "#D4A020" : "#2A1A08"} stroke="#4A3020" strokeWidth="0.3"/>
               {/* Lamp base */}
-              <rect x="47.5" y="59" width="5" height="9" rx="0.8" fill="#3A2410"/>
+              <rect x="47.5" y="59" width="5" height="9" rx="0.8" fill="#8C6A3C"/>
               {/* Lamp foot */}
-              <rect x="45.5" y="67.5" width="9" height="1.5" rx="0.5" fill="#2A1808"/>
+              <rect x="45.5" y="67.5" width="9" height="1.5" rx="0.5" fill="#4F3A24"/>
             </svg>
             {/* Lamp click area — separate from pointer-events:none wrapper */}
           </div>
           {/* Lamp hint text */}
           <div className="hero-lamp-hint" style={{ position:"absolute", right:"28%", top:"42%", pointerEvents:"none", zIndex:6, textAlign:"center", transition:"color 1.2s ease" }}>
-            <p style={{ fontFamily:"'Inter',sans-serif", fontWeight:300, fontSize:"9px", letterSpacing:".14em", textTransform:"uppercase", color:"#C8A870", opacity:0.85, whiteSpace:"nowrap", transition:"color 1.2s ease" }}>
+            <p style={{ fontFamily:"'Inter',sans-serif", fontWeight:300, fontSize:"9px", letterSpacing:".14em", textTransform:"uppercase", color:"#C8A870", opacity:1.00, whiteSpace:"nowrap", transition:"color 1.2s ease" }}>
               {warmMode ? "warm mode on" : "click the lamp"}
             </p>
             <span style={{ display:"block", width:"3px", height:"3px", borderRadius:"50%", background:"#C8A870", margin:"4px auto 0", animation:"pulse 1.5s ease-in-out infinite", transition:"background 1.2s ease" }}/>
@@ -1992,18 +1992,18 @@ export default function Profess() {
             <foreignObject x="62" y="38" width="34" height="38" overflow="visible">
               <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:"100%", height:"100%", animation:"friendBob 2.8s ease-in-out infinite", animationDelay:"0.4s" }} dangerouslySetInnerHTML={{ __html: livingRoomFemale }}/>
             </foreignObject>
-            <rect x="38" y="68" width="24" height="7" rx="1.5" fill="#2E1E0C" stroke="#3A2410" strokeWidth="0.25"/>
-            <rect x="38.5" y="68" width="23" height="3.5" rx="1" fill="#3A2610" opacity="0.7"/>
-            <rect x="39.5" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-            <rect x="44" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-            <rect x="54" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
-            <rect x="58" y="75" width="2.5" height="4" rx="0.5" fill="#251808"/>
+            <rect x="38" y="68" width="24" height="7" rx="1.5" fill="#4B5A3A" stroke="#35402A" strokeWidth="0.25"/>
+            <rect x="38.5" y="68" width="23" height="3.5" rx="1" fill="#5E7050" opacity="0.7"/>
+            <rect x="39.5" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+            <rect x="44" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+            <rect x="54" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
+            <rect x="58" y="75" width="2.5" height="4" rx="0.5" fill="#2F2418"/>
             <text x="50" y="40" textAnchor="middle" fill="#C8B090" fontSize="2.2" opacity="0.8" letterSpacing="0.4" > {lang==="id" ? "CLICK THE LAMP" : "CLICK THE LAMP"} </text>
             {warmMode && <circle cx="50" cy="50" r="20" fill="url(#lampGlowMobile)" opacity="0.7"/>}
             <g onClick={() => { setWarmMode(w => { const next = !w; setRoomMood(next ? "warm" : "neutral"); return next; }); }} style={{ cursor:"pointer" }}>
               <polygon points="44,59 56,59 53.5,51 46.5,51" fill={warmMode ? "#D4A020" : "#2A1A08"} stroke="#4A3020" strokeWidth="0.3"/>
-              <rect x="47.5" y="59" width="5" height="9" rx="0.8" fill="#3A2410"/>
-              <rect x="45.5" y="67.5" width="9" height="1.5" rx="0.5" fill="#2A1808"/>
+              <rect x="47.5" y="59" width="5" height="9" rx="0.8" fill="#8C6A3C"/>
+              <rect x="45.5" y="67.5" width="9" height="1.5" rx="0.5" fill="#4F3A24"/>
               <rect x="38" y="48" width="24" height="24" fill="transparent"/>
             </g>
             {/* Radio — same relative position/scale as desktop */}
