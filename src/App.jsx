@@ -882,19 +882,25 @@ function buildSVG(charOrKey, mood, isTalking, scene = "role") {
          ${handL}${handR}`;
 hideLegs = true;
 
-} else {
+} } else {
 
   backProps = `
     <!-- Grass -->
-    <rect x="0" y="185" width="160" height="55" fill="#3F5338"/>
-
-    <!-- Picnic blanket (behind character) -->
     <rect
-      x="34"
-      y="170"
-      width="92"
-      height="28"
-      rx="4"
+      x="0"
+      y="185"
+      width="160"
+      height="55"
+      fill="#3F5338"
+    />
+
+    <!-- Large picnic blanket -->
+    <rect
+      x="18"
+      y="166"
+      width="124"
+      height="40"
+      rx="6"
       fill="#8B5A7A"
     />
 
@@ -910,22 +916,22 @@ hideLegs = true;
     <!-- Large canopy -->
     <circle
       cx="123"
-      cy="62"
-      r="42"
+      cy="55"
+      r="52"
       fill="#4E6A43"
     />
 
     <circle
-      cx="98"
-      cy="72"
-      r="28"
+      cx="90"
+      cy="65"
+      r="34"
       fill="#58744B"
     />
 
     <circle
-      cx="145"
-      cy="76"
-      r="24"
+      cx="148"
+      cy="72"
+      r="28"
       fill="#58744B"
     />
   `;
@@ -934,7 +940,7 @@ hideLegs = true;
     <!-- Half body -->
     <rect
       x="44"
-      y="128"
+      y="120"
       rx="14"
       width="72"
       height="58"
@@ -942,20 +948,53 @@ hideLegs = true;
     />
 
     <path
-      d="M58 128 Q80 139 102 128"
+      d="M58 120 Q80 131 102 120"
       fill="none"
       stroke="#C890A0"
       stroke-width="2.5"
     />
 
-    ${outfitAccent(80,145,50)}
+    ${outfitAccent(80,138,50)}
 
     ${armLNoHand}
     ${armRNoHand}
   `;
 
   frontProps = `
-    <!-- Hands -->
+    <!-- Cross-legged pose -->
+
+    <ellipse
+      cx="56"
+      cy="188"
+      rx="26"
+      ry="10"
+      fill="${darken(b,18)}"
+    />
+
+    <ellipse
+      cx="104"
+      cy="188"
+      rx="26"
+      ry="10"
+      fill="${darken(b,18)}"
+    />
+
+    <ellipse
+      cx="52"
+      cy="196"
+      rx="14"
+      ry="5"
+      fill="${darken(b,28)}"
+    />
+
+    <ellipse
+      cx="108"
+      cy="196"
+      rx="14"
+      ry="5"
+      fill="${darken(b,28)}"
+    />
+
     ${handL}
     ${handR}
   `;
