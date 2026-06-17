@@ -1950,7 +1950,7 @@ export default function Profess() {
   // ─── Wordmark (clickable → landing) ──────────────────────────────────────
   const Wordmark = ({ size="17px" }) => (
     <button onClick={() => setScreen("landing")} style={{ background:"none", border:"none", padding:0, cursor:"pointer" }}>
-      <span style={{ fontFamily:"'Playfair Display',serif", fontSize:size, fontWeight:500, letterSpacing:".06em", color:"#F0EDE6" }}>Profess</span>
+      <span style={{ fontFamily:"'Inter',sans-serif", fontSize:size, fontWeight:500, letterSpacing:".06em", color:"#F0EDE6" }}>Profess</span>
     </button>
   );
 
@@ -2083,7 +2083,7 @@ export default function Profess() {
   >
     <p
       style={{
-        fontFamily:"'Playfair Display',serif",
+        fontFamily:"'Inter',sans-serif",
         fontSize:"14px",
         color:"#C8A870",
         marginBottom:"12px"
@@ -2135,7 +2135,7 @@ export default function Profess() {
           {/* Nav */}
           <nav className="landing-nav" style={{ position:"absolute", top:0, left:0, right:0, padding:"24px 40px", display:"flex", alignItems:"center", zIndex:10 }}>
             <div>
-              <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"22px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
+              <span style={{ fontFamily:"'Inter',sans-serif", fontSize:"22px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
               <div style={{ width:"32px", height:"1px", background:"#C8A870", marginTop:"5px" }}/>
             </div>
           </nav>
@@ -2262,7 +2262,7 @@ export default function Profess() {
             <div style={{ maxWidth:"640px", width:"100%", display:"flex", flexDirection:"column", gap:"24px" }}>
               <div>
                 <p style={{ fontSize:"9px", letterSpacing:".2em", textTransform:"uppercase", color:"#2A2520", marginBottom:"16px" }}>Communication Training</p>
-                <h1 className="hero-tagline" style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(40px,5vw,60px)", fontWeight:400, lineHeight:1.15, color:"#F0EDE6", letterSpacing:"-.01em" }}>
+                <h1 className="hero-tagline" style={{ fontFamily:"'Inter',sans-serif", fontSize:"clamp(40px,5vw,60px)", fontWeight:400, lineHeight:1.15, color:"#F0EDE6", letterSpacing:"-.01em" }}>
                   Every conversation<br/>
                   has another side.
                 </h1>
@@ -2273,7 +2273,7 @@ export default function Profess() {
               </p>
               <div>
                 <button className="hero-begin-btn" onClick={() => setScreen("lang")}
-                  style={{ background:"none", border:"1px solid #C8A458", color:"#F0EDE6", fontFamily:"'Playfair Display',serif", fontSize:"14px", fontStyle:"italic", minWidth:"200px", height:"48px", display:"flex", alignItems:"center", justifyContent:"center", letterSpacing:".04em", transition:"background .25s, border-color .25s, color .25s" }}
+                  style={{ background:"none", border:"1px solid #C8A458", color:"#F0EDE6", fontFamily:"'Inter',sans-serif", fontSize:"14px", fontStyle:"italic", minWidth:"200px", height:"48px", display:"flex", alignItems:"center", justifyContent:"center", letterSpacing:".04em", transition:"background .25s, border-color .25s, color .25s" }}
                   onMouseEnter={e=>{ e.currentTarget.style.background="rgba(200,168,112,0.05)"; e.currentTarget.style.borderColor="#C8A870"; e.currentTarget.style.color="#C8A870"; }}
                   onMouseLeave={e=>{ e.currentTarget.style.background="none"; e.currentTarget.style.borderColor="#C8A458"; e.currentTarget.style.color="#F0EDE6"; }}>
                   Begin
@@ -2396,7 +2396,7 @@ export default function Profess() {
         >
           <p
             style={{
-              fontFamily:"'Playfair Display',serif",
+              fontFamily:"'Inter',sans-serif",
               fontSize:"13px",
               color: charObj.accent || "#C8A870",
               marginBottom:"4px"
@@ -2447,7 +2447,7 @@ export default function Profess() {
                   dangerouslySetInnerHTML={{ __html: panelCharBegin }}/>
               </div>
               <div style={{ textAlign:"center" }}>
-                <p className="panel-label" style={{ fontFamily:"'Playfair Display',serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>BEGIN</p>
+                <p className="panel-label" style={{ fontFamily:"'Inter',sans-serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>BEGIN</p>
                 <p className="panel-subtitle" style={{ fontSize:"12px", color:"#C8A458", fontWeight:300 }}>Start a session</p>
               </div>
             </button>
@@ -2463,7 +2463,7 @@ export default function Profess() {
                   dangerouslySetInnerHTML={{ __html: panelCharAbout }}/>
               </div>
               <div style={{ textAlign:"center" }}>
-                <p className="panel-label" style={{ fontFamily:"'Playfair Display',serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>ABOUT</p>
+                <p className="panel-label" style={{ fontFamily:"'Inter',sans-serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>ABOUT</p>
                 <p className="panel-subtitle" style={{ fontSize:"12px", color:"#C8A458", fontWeight:300 }}>What is Profess</p>
               </div>
             </button>
@@ -2488,7 +2488,7 @@ export default function Profess() {
                 </svg>
               </div>
               <div style={{ textAlign:"center" }}>
-                <p className="panel-label" style={{ fontFamily:"'Playfair Display',serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>TERMS</p>
+                <p className="panel-label" style={{ fontFamily:"'Inter',sans-serif", fontSize:"13px", letterSpacing:".15em", color:"#C8A870", marginBottom:"8px" }}>TERMS</p>
                 <p className="panel-subtitle" style={{ fontSize:"12px", color:"#C8A458", fontWeight:300 }}>Terms & Conditions</p>
               </div>
             </button>
@@ -2501,7 +2501,7 @@ export default function Profess() {
                 <p style={{ fontSize:"15px", lineHeight:1.9, color:"#D8D5CE" }}>
                   Profess is a communication coach built around perspective. Practice difficult conversations with audiences that challenge your assumptions, question your reasoning, and reveal blind spots in your communication. The goal isn't to predict people. It's to help you see what you might have missed before the real conversation begins.
                 </p>
-                <p style={{ fontSize:"15px", lineHeight:1.9, color:"#7A7570" }}>
+                <p style={{ fontSize:"15px", lineHeight:1.9, color:"#C8A458" }}>
                   Profess was built by Jethro Amaga as a communication training tool for anyone who wants to grow — not just perform.
                 </p>
               </div>
@@ -2560,13 +2560,13 @@ export default function Profess() {
           onMouseEnter={e=>e.currentTarget.style.background="#0E0E0E"}
           onMouseLeave={e=>e.currentTarget.style.background="#080808"}>
           {/* Watermark letter */}
-          <div style={{ position:"absolute", bottom:"-2vw", right:"-1vw", fontFamily:"'Playfair Display',serif", fontSize:"28vw", color:opt.accent, opacity:.025, lineHeight:1, userSelect:"none", pointerEvents:"none", fontStyle:"italic" }}>{opt.label}</div>
+          <div style={{ position:"absolute", bottom:"-2vw", right:"-1vw", fontFamily:"'Inter',sans-serif", fontSize:"28vw", color:opt.accent, opacity:.025, lineHeight:1, userSelect:"none", pointerEvents:"none", fontStyle:"italic" }}>{opt.label}</div>
           {/* Bottom radial glow */}
           <div style={{ position:"absolute", bottom:0, left:0, right:0, height:"40%", background:`radial-gradient(ellipse at 50% 100%, ${opt.accent}0A 0%, transparent 70%)`, pointerEvents:"none" }}/>
           {/* Content */}
           <div style={{ position:"relative", zIndex:1, display:"flex", flexDirection:"column", alignItems:"center", gap:"16px" }}>
             <p style={{ fontSize:"9px", letterSpacing:".15em", textTransform:"uppercase", color:"#C8A458", marginBottom:"8px" }}>{opt.label}</p>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(40px,5vw,64px)", fontWeight:400, color:opt.accent, lineHeight:1.1 }}>{opt.name}</h2>
+            <h2 style={{ fontFamily:"'Inter',sans-serif", fontSize:"clamp(40px,5vw,64px)", fontWeight:400, color:opt.accent, lineHeight:1.1 }}>{opt.name}</h2>
             <p style={{ fontSize:"13px", color:"#C8A458", letterSpacing:".03em" }}>{opt.sub}</p>
           </div>
         </button>
@@ -2598,10 +2598,10 @@ export default function Profess() {
           style={{ flex:1, background:"#080808", border:"none", borderRight:idx===0?"1px solid #141414":"none", color:"#F0EDE6", fontFamily:"inherit", cursor:"pointer", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", position:"relative", padding:"40px", transition:"background .3s", overflow:"hidden" }}
           onMouseEnter={e=>e.currentTarget.style.background="#0E0E0E"}
           onMouseLeave={e=>e.currentTarget.style.background="#080808"}>
-          <div style={{ position:"absolute", bottom:"-4vw", right:"-2vw", fontFamily:"'Playfair Display',serif", fontSize:"30vw", color:opt.accent, opacity:.03, lineHeight:1, userSelect:"none", pointerEvents:"none", fontStyle:"italic" }}>{opt.label}</div>
+          <div style={{ position:"absolute", bottom:"-4vw", right:"-2vw", fontFamily:"'Inter',sans-serif", fontSize:"30vw", color:opt.accent, opacity:.03, lineHeight:1, userSelect:"none", pointerEvents:"none", fontStyle:"italic" }}>{opt.label}</div>
           <div style={{ position:"absolute", bottom:0, left:0, right:0, height:"40%", background:`radial-gradient(ellipse at 50% 100%, ${opt.accent}08 0%, transparent 70%)`, pointerEvents:"none" }}/>
           <div style={{ position:"relative", zIndex:1, display:"flex", flexDirection:"column", alignItems:"center", gap:"16px", maxWidth:"320px" }}>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"clamp(36px,4.5vw,56px)", fontWeight:400, color:opt.accent, lineHeight:1.1 }}>{opt.name}</h2>
+            <h2 style={{ fontFamily:"'Inter',sans-serif", fontSize:"clamp(36px,4.5vw,56px)", fontWeight:400, color:opt.accent, lineHeight:1.1 }}>{opt.name}</h2>
             <p style={{ fontSize:"13px", color:"#C8A458", lineHeight:1.7, textAlign:"center", letterSpacing:".03em" }}>{opt.desc}</p>
           </div>
         </button>
@@ -2643,7 +2643,7 @@ export default function Profess() {
           <div style={{ maxWidth:"560px", width:"100%" }}>
             <div style={{ marginBottom:"40px" }}>
               <p style={{ fontSize:"9px", letterSpacing:".15em", textTransform:"uppercase", color:"#C8A458", marginBottom:"12px" }}>{isFormal?(isID?"Formal":"Formal"):(isID?"Sosial":"Social")}</p>
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"32px", fontWeight:400, color:"#D8D5CE", lineHeight:1.2 }}>{dc.title}</h2>
+              <h2 style={{ fontFamily:"'Inter',sans-serif", fontSize:"32px", fontWeight:400, color:"#D8D5CE", lineHeight:1.2 }}>{dc.title}</h2>
             </div>
             <div style={{ display:"flex", flexDirection:"column", gap:"16px", marginBottom:"48px" }}>
               <p style={{ fontSize:"16px", lineHeight:1.85, color:"#D8D5CE" }}>{dc.body[0]}</p>
@@ -2700,7 +2700,7 @@ export default function Profess() {
           <div style={{ width:"100%", maxWidth:"480px" }}>
             <div style={{ marginBottom:"40px" }}>
               <p style={{ fontSize:"9px", letterSpacing:".15em", textTransform:"uppercase", color:"#C8A458", marginBottom:"12px" }}>{isID?"Intensitas":"Intensity"}</p>
-              <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"28px", fontWeight:400, color:"#D8D5CE" }}>{isID?"Seberapa keras Profess mendorongmu":"How hard should Profess push you"}</h2>
+              <h2 style={{ fontFamily:"'Inter',sans-serif", fontSize:"28px", fontWeight:400, color:"#D8D5CE" }}>{isID?"Seberapa keras Profess mendorongmu":"How hard should Profess push you"}</h2>
             </div>
             <div style={{ display:"flex", flexDirection:"column", gap:"0", border:"1px solid #141414" }}>
               {levels.map((lvl, idx) => (
@@ -2714,7 +2714,7 @@ export default function Profess() {
                     {[1,2,3].map(i => <div key={i} style={{ width:"5px", height:`${8+i*6}px`, background:i<=lvl.bars?lvl.color:"#1E1E1E", borderRadius:"1px" }}/>)}
                   </div>
                   <div>
-                    <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"20px", color:lvl.color, marginBottom:"8px" }}>{lvl.label}</div>
+                    <div style={{ fontFamily:"'Inter',sans-serif", fontSize:"20px", color:lvl.color, marginBottom:"8px" }}>{lvl.label}</div>
                     <div style={{ fontSize:"13px", color:"#C8A458", lineHeight:1.7, maxWidth:"320px", letterSpacing:".03em" }}>{lvl.desc}</div>
                   </div>
                 </button>
@@ -2779,7 +2779,7 @@ export default function Profess() {
         <div style={{ position:"relative", zIndex:1, flex:1, overflowY:"auto", padding:"40px" }}>
           <div style={{ maxWidth:"600px", margin:"0 auto" }}>
             <div style={{ marginBottom:"40px" }}>
-              <p style={{ fontFamily:"'Playfair Display',serif", fontSize:"28px", fontWeight:400, color:"#D8D5CE", marginBottom:"8px" }}>
+              <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"28px", fontWeight:400, color:"#D8D5CE", marginBottom:"8px" }}>
                 {isID?"Pilih skenario":"Choose a scenario"}
               </p>
               <p style={{ fontSize:"13px", color:"#C8A458", letterSpacing:".03em" }}>
@@ -2835,14 +2835,14 @@ export default function Profess() {
       <div className="screen-enter" style={{ ...BASE, display:"flex", flexDirection:"column" }}>
         <style>{css}</style>
         <div style={{ padding:"0 40px", height:"56px", borderBottom:"1px solid #141414", display:"flex", alignItems:"center" }}>
-          <span style={{ fontFamily:"'Playfair Display',serif", fontSize:"17px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
+          <span style={{ fontFamily:"'Inter',sans-serif", fontSize:"17px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
         </div>
         <div style={{ flex:1, display:"flex", alignItems:"center", justifyContent:"center", padding:"48px 24px" }}>
           <div style={{ maxWidth:"520px", width:"100%" }}>
             <p style={{ fontSize:"9px", letterSpacing:".15em", textTransform:"uppercase", color:"#C8A458", marginBottom:"12px" }}>
               {isID?"Ringkasan Sesi":"Session Complete"}
             </p>
-            <h2 style={{ fontFamily:"'Playfair Display',serif", fontSize:"32px", fontWeight:400, color:accent, marginBottom:"40px", lineHeight:1.2 }}>
+            <h2 style={{ fontFamily:"'Inter',sans-serif", fontSize:"32px", fontWeight:400, color:accent, marginBottom:"40px", lineHeight:1.2 }}>
               {isID?"Kamu sudah selesai.":"You showed up."}
             </h2>
             <div style={{ borderTop:"1px solid #141414", marginBottom:"40px" }}>
@@ -3050,7 +3050,7 @@ export default function Profess() {
 
       {/* Session header */}
       <div style={{ padding:`0 ${isMobile?"16px":"32px"}`, height:isMobile?"48px":"56px", borderBottom:"1px solid #141414", display:"flex", alignItems:"center", gap:"16px", flexShrink:0 }}>
-        <span style={{ fontFamily:"'Playfair Display',serif", fontSize:isMobile?"15px":"17px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
+        <span style={{ fontFamily:"'Inter',sans-serif", fontSize:isMobile?"15px":"17px", fontWeight:500, letterSpacing:".06em" }}>Profess</span>
         {!isMobile && <>
           <span style={{ width:"1px", height:"12px", background:"#1A1A1A", flexShrink:0 }}/>
           <span style={{ fontSize:"9px", color:"#C8A458", letterSpacing:".12em", textTransform:"uppercase" }}>{sessionMode}</span>
@@ -3097,7 +3097,7 @@ export default function Profess() {
           <div style={{ background:isTransitioning?"#080808":charMeta.bg, transition:"background .4s ease", borderBottom:"1px solid #141414", padding:"12px 16px", display:"flex", alignItems:"center", gap:"14px", flexShrink:0 }}>
             {charAnimBlock("78px")}
             <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"16px", color:charMeta.accent, marginBottom:"2px" }}>{charMeta.name}</div>
+              <div style={{ fontFamily:"'Inter',sans-serif", fontSize:"16px", color:charMeta.accent, marginBottom:"2px" }}>{charMeta.name}</div>
               <div style={{ fontSize:"10px", color:"#C8A458", letterSpacing:".1em", textTransform:"uppercase" }}>{charMeta.title}</div>
               {currentMood !== "neutral" && (
                 <div style={{ marginTop:"5px", display:"inline-flex", alignItems:"center", gap:"5px" }}>
@@ -3127,7 +3127,7 @@ export default function Profess() {
             <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"16px", padding:"32px 16px 24px", width:"100%" }}>
               {charAnimBlock("200px")}
               <div style={{ textAlign:"center", opacity:isTransitioning?0:1, transition:"opacity .38s", width:"100%" }}>
-                <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"16px", color:charMeta.accent, marginBottom:"6px" }}>{charMeta.name}</div>
+                <div style={{ fontFamily:"'Inter',sans-serif", fontSize:"16px", color:charMeta.accent, marginBottom:"6px" }}>{charMeta.name}</div>
                 <div style={{ fontSize:"9px", color:"#C8A458", letterSpacing:".1em", textTransform:"uppercase", lineHeight:1.6 }}>{charMeta.title}</div>
                 {currentMood !== "neutral" && (
                   <div style={{ marginTop:"12px", display:"inline-flex", alignItems:"center", gap:"7px" }}>
