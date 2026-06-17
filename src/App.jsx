@@ -940,49 +940,53 @@ hideLegs = true;
     ${armRNoHand}
   `;
 
-  frontProps = `
-    <!-- Large round cafe table -->
+frontProps = `
+  <!-- Large cafe table -->
 
-    <ellipse
-      cx="80"
-      cy="186"
-      rx="58"
-      ry="12"
-      fill="#4A3124"
-    />
+  <ellipse
+    cx="80"
+    cy="194"
+    rx="74"
+    ry="16"
+    fill="#4A3124"
+  />
 
-    <ellipse
-      cx="80"
-      cy="190"
-      rx="58"
-      ry="12"
-      fill="#3A2418"
-    />
+  <!-- Table thickness -->
 
-    <!-- Table leg -->
+  <ellipse
+    cx="80"
+    cy="200"
+    rx="74"
+    ry="16"
+    fill="#3A2418"
+  />
 
-    <rect
-      x="77"
-      y="190"
-      width="6"
-      height="12"
-      fill="#3A2418"
-    />
+  <!-- Table leg -->
 
-    <!-- Coffee cup -->
+  <rect
+    x="76"
+    y="198"
+    width="8"
+    height="10"
+    fill="#3A2418"
+  />
 
-    <rect
-      x="116"
-      y="174"
-      width="8"
-      height="6"
-      rx="1"
-      fill="#D8D5CE"
-    />
+  <!-- Coffee cup -->
 
-    ${handL}
-    ${handR}
-  `;
+  <rect
+    x="118"
+    y="176"
+    width="8"
+    height="6"
+    rx="1"
+    fill="#D8D5CE"
+  />
+
+  <!-- Hands render LAST so they stay above table -->
+
+  ${handL}
+  ${handR}
+`;
 
   hideLegs = true;
 }
