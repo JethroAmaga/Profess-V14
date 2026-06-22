@@ -560,7 +560,7 @@ const SCENES = {
     { id: "professional",  top: "#2C2622", bottom: "#0E0C0A", floor: "#C9986A", mote: "#D4AC88", // cafe amber
       photos: ["espresso-cup", "latte-art", "coffee-beans", "ceramic-mug"] },
     { id: "situational",   top: "#33222E", bottom: "#100A10", floor: "#C8789A", mote: "#D898AE", // dusk party
-      photos: ["champagne-glass", "neon-sign", "city-skyline-night", "cocktail-bar"] },
+      photos: ["champagne", "neon", "nightclub", "cocktail"] },
   ],
 };
 const DEFAULT_SCENE = { id: "default", top: "#2A2018", bottom: "#0E0B08", floor: "#C9985E", mote: "#D4AC80", photos: ["warm-room"] };
@@ -945,14 +945,21 @@ function IntroVideoScreen({ onDone, lang, reduceMotion }) {
     const onLoaded = () => { durationRef.current = v.duration || 0; };
     v.addEventListener("loadedmetadata", onLoaded);
 
-    const applyProgress = (delta) => {
-      setHint(false);
-      progressRef.current = Math.min(INTRO_SCRUB_DISTANCE, Math.max(0, progressRef.current + delta));
+    let rafId = null;
+    let hintCleared = false;
+    const flush = () => {
+      rafId = null;
       if (durationRef.current > 0) {
         const frac = progressRef.current / INTRO_SCRUB_DISTANCE;
         v.currentTime = frac * durationRef.current;
       }
       if (progressRef.current >= INTRO_SCRUB_DISTANCE) finish();
+    };
+
+    const applyProgress = (delta) => {
+      if (!hintCleared) { hintCleared = true; setHint(false); }
+      progressRef.current = Math.min(INTRO_SCRUB_DISTANCE, Math.max(0, progressRef.current + delta));
+      if (rafId == null) rafId = requestAnimationFrame(flush);
     };
 
     const onWheel = (e) => { e.preventDefault(); applyProgress(e.deltaY); };
@@ -974,6 +981,7 @@ function IntroVideoScreen({ onDone, lang, reduceMotion }) {
     window.addEventListener("touchmove", onTouchMove, { passive: true });
     window.addEventListener("keydown", onKey);
     return () => {
+      if (rafId != null) cancelAnimationFrame(rafId);
       v.removeEventListener("loadedmetadata", onLoaded);
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("touchstart", onTouchStart);
@@ -1833,9 +1841,16 @@ export default function Profess() {
                 : "linear-gradient(100deg, transparent 0%, transparent 30%, black 46%, black 100%)" }}>
             <motion.div style={{ position: "absolute", inset: "-4%", x: photoX, y: photoY }}>
               <motion.img
-                src={photoFor(scene, 1200, 1600)}
+                src={photoFor(scene, isMobile ? 800 : 1200, isMobile ? 1100 : 1600)}
                 onError={(e) => { e.target.onerror = null; e.target.src = sceneArtFor(scene.id, 1200, 1600, scene); }}
-                alt="" loading="eager"
+                onLoad={(e) => {
+                  // LoremFlickr sometimes returns a tiny placeholder with HTTP 200
+                  // (no error event fires) instead of a real photo — catch that here.
+                  if (e.target.naturalWidth > 0 && e.target.naturalWidth < 100) {
+                    e.target.src = sceneArtFor(scene.id, 1200, 1600, scene);
+                  }
+                }}
+                alt="" loading="eager" decoding="async"
                 initial={{ opacity: 0, scale: 1.0 }}
                 animate={reduceMotion
                   ? { opacity: isMobile ? 0.4 : 1, scale: 1.06 }
@@ -1845,7 +1860,7 @@ export default function Profess() {
                   : { opacity: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
                       scale: { duration: 46, ease: "easeInOut", times: [0, 0.4, 0.7, 1], repeat: Infinity, repeatType: "loop" } }}
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 28%",
-                  filter: "grayscale(1) contrast(1.15) brightness(.78)" }} />
+                  filter: "grayscale(1) contrast(1.15) brightness(.78)", willChange: "transform, opacity" }} />
             </motion.div>
             {/* Duotone wash — accent color in the lights, scene ink in the shadows */}
             <div style={{ position: "absolute", inset: 0, mixBlendMode: "color", background: sessionAccent }} />
